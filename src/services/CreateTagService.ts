@@ -1,4 +1,5 @@
 import { getCustomRepository } from "typeorm";
+import { IncorrectNameError } from "../errors/IncorrectNameError";
 import { TagsRepositories } from '../repositories/TagsRepositories';
 
 
@@ -6,7 +7,7 @@ class CreateTagService{
     async execute(name:string) {
         const tagsRepositories = getCustomRepository(TagsRepositories); // Referencia ao repositorio para usa-lo
 
-        if(!name) throw new Error("Incorrect Name!");
+        if(!name) throw new IncorrectNameError();
 
         const tagAlreadyExists = await tagsRepositories.findOne({ name: name })
 
