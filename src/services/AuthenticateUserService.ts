@@ -13,7 +13,7 @@ interface IAunthenticateRequest {
 }
 
 class AuthenticateUserService {
-    async execute({email , password}:IAunthenticateRequest){
+    static async execute({email , password}:IAunthenticateRequest){
         const userRepositories = getCustomRepository(UsersRepositories);
         // verifica se o email existe
         const user = await userRepositories.findOne({email});

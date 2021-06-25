@@ -1,8 +1,4 @@
 
-class IncorrectNameError extends Error {
-    constructor() {
-        super('Incorrect Name');
-    }
-}
+class IncorrectNameError extends Error {constructor() {super('Incorrect Name');}}
 
 export { IncorrectNameError }

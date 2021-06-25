@@ -1,7 +1,3 @@
-class IncorrectEmailError extends Error {
-    constructor() {
-        super('Email incorrect');
-    }
-}
+class IncorrectEmailError extends Error {constructor() {super('Email incorrect');}}
 
 export { IncorrectEmailError }

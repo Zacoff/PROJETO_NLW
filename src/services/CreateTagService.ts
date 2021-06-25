@@ -4,7 +4,7 @@ import { TagsRepositories } from '../repositories/TagsRepositories';
 
 
 class CreateTagService{
-    async execute(name:string) {
+    static async execute(name:string) {
         const tagsRepositories = getCustomRepository(TagsRepositories); // Referencia ao repositorio para usa-lo
 
         if(!name) throw new IncorrectNameError();

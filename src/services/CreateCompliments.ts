@@ -11,7 +11,7 @@ interface IComplimentRequest {
 }
 
 class CreateComplimentService {
-    async execute({ tag_id, user_sender, user_receiver, message } :IComplimentRequest){
+    static async execute({ tag_id, user_sender, user_receiver, message } :IComplimentRequest){
         const complimentsRepository = getCustomRepository(ComplimentsRepositories);
         const userRepositories = getCustomRepository(UsersRepositories);
 
