@@ -1,0 +1,15 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "admin",
+    "database": "api_nlw",
+    "entities": ["./server/api/entities/*.ts"],
+    "synchronize": false,
+    "logging": false,
+    "migrations": ["./server/api/database/migrations*.ts"],
+    "cli": {
+        "migrationsDir": "./server/api/database/migrations"
+    }
+}
